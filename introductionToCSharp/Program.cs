@@ -74,6 +74,9 @@ namespace introductionToCSharp
             string name = myname ?? "boluwatife";
                 
             Console.WriteLine(name);
+            Console.WriteLine("You are welcome");
+
+
 
 
         }
