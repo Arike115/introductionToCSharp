@@ -3,33 +3,31 @@ using System;
 
 namespace introductionToCSharp
 {
-    class Program
+     class Program
    {
-       static void Main()
+        studentdetails cuts = new studentdetails();
+
+        static void Main()
         {
-            StudentClass cust = new StudentClass();
-            cust.Name = "Brad pitt";
-            cust.Gender = Gender.unknown;
-            cust.Age = 20;
-            cust.PaymentType = PaymentType.POS;
-            cust.fulldetails();
+            int j = 100;
+            int i = 200;
 
-            StudentClass custs = new StudentClass();
-            custs.Name = "Jude Mratins";
-            custs.Gender = Gender.Male;
-            custs.Age = 30;
-            custs.PaymentType = PaymentType.Transfer;
-            custs.fulldetails();
+            decimal result = j + i;
 
-            StudentClass custo = new StudentClass();
-            custo.Name = "Naomi cambello";
-            custo.Gender = Gender.Female;
-            custo.Age = 45;
-            custo.PaymentType = PaymentType.POS;
-            custo.fulldetails();
+            var total = Mydetails<int>.Equalsdetails(5, 5);
+            var amount = Mydetails<string>.Equalsnumber("ab", "ab");
 
-            StudentClass.StudentClassdetails classdetails = new StudentClass.StudentClassdetails();
-            classdetails.fulldetails();
+
+            if(total)
+            {
+                Console.WriteLine("details are equal");
+            }
+            else
+            {
+                Console.WriteLine("details not equal");
+            }
+
+            
         }
 
 

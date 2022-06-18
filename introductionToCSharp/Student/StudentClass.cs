@@ -6,41 +6,16 @@ using System.Threading.Tasks;
 
 namespace introductionToCSharp.Student
 {
-    public class StudentClass
+    public class Mydetails<r>
     {
-
-        public string Name { get; set; }
-        public Gender Gender { get; set; }
-        public int Age { get; set; }
-        public PaymentType PaymentType { get; set; }
-
-        public void  fulldetails()
+        public static bool Equalsnumber(r number, r number2)
         {
-            Console.WriteLine("Name:{0}, Gender:{1}, Age:{2}, Payment:{3}", Name, Gender, Age, PaymentType);
+            return number.Equals(number2);
         }
 
-        public class StudentClassdetails
+        public static bool Equalsdetails(r firstnumber, r secondnumber)
         {
-
-            public void fulldetails()
-            {
-                Console.WriteLine("your are welcome to the nested class");
-            }
+            return firstnumber.Equals(secondnumber);
         }
     }
-
-    public enum Gender
-    {
-        Male = 1,
-        Female = 2,
-        unknown = 3
-    }
-
-    public enum PaymentType
-    { 
-        Cash,
-        POS,
-        Transfer
-    }
-
 }

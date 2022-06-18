@@ -12,6 +12,7 @@ namespace introductionToCSharp
 
     //interface 
 
+    
     public interface IStudent
     {
         void ALLdetails();
@@ -21,6 +22,7 @@ namespace introductionToCSharp
 
     public class studentdetails : IStudent
     {
+       
         public void ALLdetails()
         {
             Console.WriteLine("welcome to csharp class");
