@@ -1,37 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace introductionToCSharp
 {
-    public class customer
+    ////inheritance
+
+    //public class student
+    //{
+    //    string _name;
+    //    int _age;
+    //}
+
+    //interface 
+
+    public interface IStudent
     {
-        string _firstname;//field
-        string _lastname;
-        int _phonenumber;
-        decimal _quantity;
-
-
-        //constructor
-        public customer(string Firstname, string Lastname, decimal total)
-        {
-            _firstname = Firstname;
-            _lastname = Lastname;
-            _quantity = total;
-        }
-
-        //method
-        public void Fullname()
-        {
-            Console.WriteLine("full name = {0}", _firstname + " " + _lastname);
-        }
-        //method
-        public void Justname()
-        {
-            Console.WriteLine("justname = {0}", _lastname);
-        }
+        void ALLdetails();
+            void GetMethod();
 
     }
+
+    public class studentdetails : IStudent
+    {
+        public void ALLdetails()
+        {
+            Console.WriteLine("welcome to csharp class");
+        }
+
+        public void GetMethod()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public struct customer :IStudent
+    {
+        string _name;
+
+        public void ALLdetails()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void fulldetails()
+        {
+            Console.WriteLine("hello world");
+        }
+
+        public void GetMethod()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
 }
