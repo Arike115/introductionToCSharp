@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace introductionToCSharp.Student
 {
-    public class Mydetails<r>
+    
+    public  class Mydetails
     {
-        public static bool Equalsnumber(r number, r number2)
+      public int DurationHour { get; set; }
+      public DateTime CreatedOnTime { get; set; }
+
+       public Mydetails(int durationhour)
         {
-            return number.Equals(number2);
+            DurationHour = durationhour;
+            CreatedOnTime = DateTime.Now;
         }
 
-        public static bool Equalsdetails(r firstnumber, r secondnumber)
+        //operator overloading
+        public static Mydetails operator *(Mydetails a, Mydetails b)
         {
-            return firstnumber.Equals(secondnumber);
+            return new Mydetails(a.DurationHour * b.DurationHour);
         }
     }
 }

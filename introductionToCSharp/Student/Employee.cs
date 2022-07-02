@@ -12,6 +12,9 @@ namespace introductionToCSharp.Student
        public string Name { get; set; }
        public int  Experience { get; set; }
        public int Salary { get; set; }
+
+
+
         
     }
 }
