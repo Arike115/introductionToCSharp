@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,19 +10,35 @@ namespace introductionToCSharp.Student
     
     public  class Mydetails
     {
-      public int DurationHour { get; set; }
-      public DateTime CreatedOnTime { get; set; }
+      public string Name { get; set; }
+      public int Age { get; set; }
 
-       public Mydetails(int durationhour)
+       public Mydetails(string name,int age)
         {
-            DurationHour = durationhour;
-            CreatedOnTime = DateTime.Now;
+            Name = name;
+            Age = age;
         }
 
-        //operator overloading
-        public static Mydetails operator *(Mydetails a, Mydetails b)
+
+    }
+
+  public class Details : IEnumerable
+    {
+        public Mydetails[] player = new Mydetails[4];
+
+        public Details()
         {
-            return new Mydetails(a.DurationHour * b.DurationHour);
+            player[0] = new Mydetails("joy", 23);
+            player[1] = new Mydetails("moses", 25);
+            player[2] = new Mydetails("ruth", 3);
+            player[3] = new Mydetails("sam", 23);
+        }
+
+        
+        public IEnumerator GetEnumerator()
+        {
+            return player.GetEnumerator();
         }
     }
+
 }
